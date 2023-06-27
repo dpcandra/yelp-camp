@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="row w-100 h-100 d-flex justify-content-center">
+        <div class="col-5">
+            <h1>Edit <%= campground.title %></h1>
+            <form action="/campgrounds/<%= campground.id %>?_method=PUT" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Campground Title</label>
+                    <input type="text" name="campground[title]" class="form-control" id="title" value="<%= campground.title %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="campground[location]" class="form-control" id="location" value="<%= campground.location %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price <span class="text-muted"><small>/night</small></span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" name="campground[price]" id="price" aria-label="Amount (to the nearest dollar)" value="<%= campground.price %>" required>
+                        <span class="input-group-text">.00</span>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>  
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image URL</label>
+                    <input type="text" name="campground[image]" class="form-control" id="image" value="<%= campground.image %>">
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" name="campground[description] id="floatingTextarea2" style="height: 100px" required><%= campground.description %></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <label for="floatingTextarea2">Write the location description</label>
+                  </div>
+                <button type="submit" class="btn btn-info text-white">Save</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <a href="/campgrounds/<%= campground.id %>">All Campgrounds</a>
+    </footer>

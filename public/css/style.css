@@ -1,0 +1,27 @@
+.star{
+    width: 30px;
+    fill: rgb(214, 214, 214);
+    transition: 0.3s;
+}
+
+.gold-color{
+    fill: rgb(255, 213, 6);
+}
+
+.star:hover{
+    transform: translateY(-5px);
+}
+
+.reviewer-pic{
+    width: 40px;
+    border-radius: 50px;
+}
+
+.star-reviewer{
+    width: 15px;
+    fill: rgb(255, 213, 6);
+}
+.star-reviewer-blank{
+    width: 15px;
+    fill: rgb(214, 214, 214);
+}
