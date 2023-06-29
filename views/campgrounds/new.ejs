@@ -16,7 +16,7 @@
     <div class="row w-100 h-100 d-flex justify-content-center">
         <div class="col-5">
             <h1>Add New Campground</h1>
-            <form action="/campgrounds" method="post" class="needs-validation" novalidate>
+            <form action="/campgrounds" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="title" class="form-label">Campground Title</label>
                     <input type="text" name="campground[title]" class="form-control" id="title" required>
@@ -42,12 +42,18 @@
                         Looks good!
                     </div>                  
                 </div>  
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="image" class="form-label">Image URL</label>
                     <input type="text" name="campground[image]" class="form-control" id="image">
+                </div> -->
+                <div class="mb-3">
+                    <label for="image" class="form-label d-block">Upload Image</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04" name="image" multiple>
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" name="campground[description] id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <textarea class="form-control" name="campground[description]" id="floatingTextarea2" style="height: 100px" required></textarea>
                     <label for="floatingTextarea2">Write the location description</label>
                     <div class="valid-feedback">
                         Looks good!
