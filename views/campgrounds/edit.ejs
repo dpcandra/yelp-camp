@@ -3,7 +3,7 @@
     <div class="row w-100 h-100 d-flex justify-content-center">
         <div class="col-5">
             <h1>Edit <%= campground.title %></h1>
-            <form action="/campgrounds/<%= campground.id %>?_method=PUT" method="post" class="needs-validation" novalidate>
+            <form action="/campgrounds/<%= campground.id %>?_method=PUT" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="title" class="form-label">Campground Title</label>
                     <input type="text" name="campground[title]" class="form-control" id="title" value="<%= campground.title %>" required>
@@ -29,12 +29,31 @@
                         Looks good!
                     </div>
                 </div>  
-                <div class="mb-3">
-                    <label for="image" class="form-label">Image URL</label>
-                    <input type="text" name="campground[image]" class="form-control" id="image" value="<%= campground.image %>">
-                </div>
+               
+                   
+                    <div class="mb-3">
+                        <label for="image" class="form-label d-block">Upload Image</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="inputGroupFile04" name="image" multiple>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="row">
+                            <% campground.images.forEach((image,i) => { %>
+                               
+                                <div class="col-3">
+                                    <img class="img-fluid border p-2 rounded" src="<%= image.thumbnail %>" alt="">
+                                    <input type="checkbox" id="img-<%= i %>" name="deleteImages[]" value="<%= image.filename %>">
+                                    <label for="img-<%= i %>" class="form-label">Delete?</label>
+                                </div>
+                                
+                            <% }); %>
+                        </div>
+                    </div>
+                
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" name="campground[description] id="floatingTextarea2" style="height: 100px" required><%= campground.description %></textarea>
+                    <textarea class="form-control" name="campground[description]" id="floatingTextarea2" style="height: 100px" required><%= campground.description %></textarea>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
