@@ -1,0 +1,85 @@
+body{
+    background-image:  url("/image/patrik-register.jpg") !important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    border-bottom: 3px solid white;
+    font-weight: bold;
+}
+
+.active{
+    border-bottom: 3px solid white;
+    font-weight : bold;
+}
+
+.input-style{
+    border-radius: 0px !important;
+    background-color: #524850;
+    border: 0px;
+}
+
+.input-style:focus{
+    background-color: #524850;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+.input-group.focus{
+    border-left: 4px solid #f5d0bb;
+}
+.input-style:valid{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.input-style:invalid{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-group{
+    background-color: #524850;
+}
+
+.input-group small{
+    color: #ffffffc4;
+    font-size: 13px;
+}
+
+.signinbtn{
+    background-color: #f5d0bb;
+    border: none;
+    color: black;
+    width: 50%;
+    box-shadow: 0px 0px 23px -6px #e3d5cd;
+    
+}
+
+.signinbtn:hover{
+    background-color: #cfb19f !important;
+    color: black;
+    animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #f5d0bb;
+    }
+    50% {
+      box-shadow: 0 0 20px #f5d0bb;
+    }
+    100% {
+      box-shadow: 0 0 5px #f5d0bb;
+    }
+  }

@@ -1,4 +1,86 @@
-<% layout('layouts/boilerplate') %>
+<!DOCTYPE html>
+<html lang="en" class="h-100 w-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/login.css">
+    <title>YelpCamp</title>
+</head>
+<body class="container d-flex w-100 h-100">
+
+   <div class="row d-flex justify-content-center my-auto login-box-row">
+        <div class="col-lg-4 col-md-11 col-11 m-0 login-col p-5">
+
+            <div class="d-flex mb-5 navbar-login">
+                <div class="link me-3 d-flex active">
+                    <a href="/login" class=" text-decoration-none text-white mx-auto">Login</a>
+                </div>
+                <div class="link me-3 d-flex">
+                    <a href="/register" class=" text-decoration-none text-white">Register</a>
+                </div>
+            </div>
+
+            <h1 class="text-white">Login</h1>
+            <p class="text-white mt-0 mb-5 text-opacity-50">Welcome to YelpCamp</p>
+            <form action="/login" method="post" class="needs-validation" novalidate>
+                <div class="mb-1">
+                    <div class="input-group d-flex flex-column px-3">
+                        <small class="pt-1">Username</small>
+                        <input type="text" name="username" class="form-control input-style w-100" id="username" required oninput="changeColor(this)" onfocus="addFocusClass(this)" onblur="removeFocusClass(this)">
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>                  
+                </div>
+    
+                <div class="">
+                    <div class="input-group d-flex flex-column px-3">
+                        <small class="pt-1">Password</small>
+                        <input type="password" name="password" class="form-control input-style w-100" id="password" required oninput="changeColor(this)" onfocus="addFocusClass(this)" onblur="removeFocusClass(this)">
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>                  
+                </div>
+                <div class="mb-4">
+                    <small class="text-white text-opacity-50">Don't have an account? <a class="text-white" href="/register">Register</a></small>
+                </div>
+                <button type="submit" class="btn btn-success signinbtn">Sign In</button>
+            </form>
+            
+        </div>
+        <div class="col-lg-4 col-md-11 col-11 p-0 login-col-right">
+            <img src="/image/taneli.jpg" class="img-fluid col4img" alt="">
+        </div>
+   </div>
+
+    <!-- <div class="">
+        <p class="text-white text-center">&copy; 2023</p>
+    </div> -->
+
+    <!-- <h1>Homepage YelpCamp</h1> -->
+    
+    <script src="/js/bootstrap.bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="/js/validateForms.js"></script>
+    <script>
+        function changeColor(input) {
+          input.style.color = 'white';
+        }
+        function addFocusClass(input) {
+            input.parentNode.classList.add('focus');
+        }
+
+        function removeFocusClass(input) {
+            input.parentNode.classList.remove('focus');
+        }
+    </script>
+</body>
+</html>
+
+<!-- <% //layout('layouts/boilerplate') %>
 
 <div class="row w-100 h-100 d-flex justify-content-center">
     <div class="col-5">
@@ -25,4 +107,4 @@
             <button type="submit" class="btn btn-success">Sign In</button>
         </form>
     </div>
-</div>
+</div> -->

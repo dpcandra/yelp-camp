@@ -1,0 +1,112 @@
+body{
+    background-color: #342528;
+}
+
+.login-col{
+    background-color: #473A44;
+    /* box-shadow: 0px 0px 54px 0px; */
+    box-shadow: -14px 0px 50px -16px;
+    z-index: 9999;
+}
+
+.input-style{
+    border-radius: 0px !important;
+    background-color: #524850;
+    border: 0px;
+}
+
+.input-style:focus{
+    background-color: #524850;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+.input-group.focus{
+    border-left: 4px solid #f5d0bb;
+}
+.input-style:valid{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.input-style:invalid{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-group{
+    background-color: #524850;
+}
+
+.input-group small{
+    color: #ffffffc4;
+    font-size: 13px;
+}
+
+.signinbtn{
+    background-color: #f5d0bb;
+    border: none;
+    color: black;
+    width: 50%;
+    box-shadow: 0px 0px 23px -6px #e3d5cd;
+    
+}
+
+.signinbtn:hover{
+    background-color: #cfb19f !important;
+    color: black;
+    animation: glowing 1.5s infinite;
+}
+
+.active{
+    border-bottom: 3px solid #f5d0bb;
+}
+
+@keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #f5d0bb;
+    }
+    50% {
+      box-shadow: 0 0 20px #f5d0bb;
+    }
+    100% {
+      box-shadow: 0 0 5px #f5d0bb;
+    }
+  }
+  
+  
+.navbar-login .link{
+    width: 60px;
+}
+
+.login-col-right{
+    box-shadow: 0px 0px 54px 0px;
+}
+    
+
+
+/* Small devices (up to 576px) */
+    @media (max-width: 576px) {
+    /* CSS rules for small screens */
+  }
+  
+  /* Medium devices (between 577px and 992px) */
+  @media (min-width: 577px) and (max-width: 992px) {
+    /* CSS rules for medium screens */
+  }
+  
+  /* Large devices (above 993px) */
+  @media (min-width: 993px) {
+    /* CSS rules for large screens */
+    .login-col{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .login-col-right{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }    
+    .login-col-right img{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }    
+  }

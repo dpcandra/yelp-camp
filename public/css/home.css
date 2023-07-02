@@ -2,8 +2,13 @@
     background-color: transparent !important;
 }
 
+.nav-link{
+    transition: 0.3s;
+}
+
 .nav-link:hover{
     border-bottom: 3px solid white;
+    font-weight: bold;
 }
 
 .active{

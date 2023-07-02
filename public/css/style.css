@@ -25,3 +25,13 @@
     width: 15px;
     fill: rgb(214, 214, 214);
 }
+
+#cluster-map {
+    width: 100%;
+    height: 300px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
