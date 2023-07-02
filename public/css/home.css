@@ -1,0 +1,41 @@
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+.nav-link:hover{
+    border-bottom: 3px solid white;
+}
+
+.active{
+    border-bottom: 3px solid white;
+    font-weight : bold;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/image/patrik.jpg") !important;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.btn-campground{
+    background-color: white;
+    color: black;
+    border: none;
+}
+.btn-campground:hover{
+    background-color: rgb(173, 173, 173);
+    color: black;
+}
+.btn-campground:active{
+    background-color: rgb(255, 255, 255) !important;
+    color: black;
+}
+
+.loged-user-picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid white;
+    padding: 2px;
+}

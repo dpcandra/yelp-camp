@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100 w-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>YelpCamp</title>
 </head>
-<body>
+<body class="bg-dark h-100 w-100 d-flex flex-column justify-content-between">
 
-    <h1>Homepage YelpCamp</h1>
+   
+        <nav class="navbar navbar-transparent navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="/">YelpCamp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                        </li>
+                        <% if(!currentUser){ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Login</a>
+                            </li>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/campgrounds">
+                                    <img class="loged-user-picture" src="/image/blankuser.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div><!--collapse navbar-collapse-->
+            </div><!--container-->
+        </nav>
+
+        <div class="d-flex flex-column">
+            <h1 class="text-white mx-auto">YelpCamp</h1>
+            <p class="text-white mx-auto m-0 p-0">Welcome To YelpCamp</p>
+            <p class="text-white mx-auto m-0 p-0">Jump right in and explore our many Campgrounds.</p>
+            <p class="text-white mx-auto m-0 p-0">Feel free to share some of you own and comment on other!</p>
+            <a class="btn btn-primary mx-auto btn-campground mt-3" href="./campgrounds">View Campgrounds</a>
+        </div>
+
+        <div class="">
+            <p class="text-white text-center">&copy; 2023</p>
+        </div>
+
+
+    <!-- <h1>Homepage YelpCamp</h1> -->
     
+    <script src="/js/bootstrap.bundle.js"></script>
 </body>
 </html>
