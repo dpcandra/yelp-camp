@@ -34,7 +34,8 @@ main().then(()=>{
 
 async function main() {
 //   await mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp');
-  await mongoose.connect(dbUrl);
+//   await mongoose.connect(dbUrl);
+  await mongoose.connect('mongodb+srv://dpcandra:84zefYZYj9P3XGLk@cluster0.oiqs9a9.mongodb.net/yelpcamp?retryWrites=true&w=majority');
 }
 
 app.engine('ejs', ejsMate);
