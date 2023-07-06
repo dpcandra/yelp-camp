@@ -1,6 +1,6 @@
 // const campground = require("../../models/campground");
 
-mapboxgl.accessToken = mapToken;
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2FuZHJhZGhwIiwiYSI6ImNsamloNjNxOTAwNnkzanQ4NTM3YWkxN3QifQ.nq_aA1IGe24-r1TOOfQNoQ';
     const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v12', // style URL
